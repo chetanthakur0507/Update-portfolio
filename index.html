@@ -4,313 +4,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="Chetan Thakur portfolio - Frontend, Backend and Freelance Client Projects.">
+    <title>Chetan Thakur | Freelance Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header class="header">
-        <a href="#" class="logo">Chetan</a>
+<body class="is-loading">
+    <div class="page-loader" id="page-loader" aria-live="polite">
+        <div class="loader-core">
+            <p class="loader-brand">Chetan.</p>
+            <p class="loader-tag">Crafting production-grade digital products</p>
+            <div class="loader-track"><span id="loader-progress"></span></div>
+        </div>
+    </div>
 
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <div class="page-wipe" id="page-wipe" aria-hidden="true"></div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#services">Services</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+    <canvas id="webgl-canvas"></canvas>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="header" id="top">
+        <a href="#home" class="logo route-link">Chetan<span>.</span></a>
+        <button class="menu-icon" id="menu-icon" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="active route-link">Home</a>
+            <a href="#services" class="route-link">Services</a>
+            <a href="#freelance" class="route-link">Freelance</a>
+            <a href="#skills" class="route-link">Skills</a>
+            <a href="#projects" class="route-link">Projects</a>
+            <a href="#clients" class="route-link">Client Work</a>
+            <a href="#testimonials" class="route-link">Reviews</a>
+            <a href="#contact" class="route-link">Contact</a>
         </nav>
     </header>
 
-    <section class="home" id="home">
-        <div class="home-img">
-            <img src="chetans.jpeg" alt="">
-        </div>
+    <main>
+        <section class="home snap-section" id="home" data-section>
+            <div class="parallax-layer orb orb-a" data-depth="0.2"></div>
+            <div class="parallax-layer orb orb-b" data-depth="0.35"></div>
 
-        <div class="home-content">
-            <h1>Hi, It's <span>Chetan</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>with a passion for creating dynamic and visually appealing websites. I specialize in HTML, CSS, and JavaScript, and enjoy bringing creative ideas to life through clean and efficient code. Whether it's designing engaging user interfaces or solving complex coding problems, I thrive on the challenges and opportunities that web development offers.</p>
+            <div class="hero-grid">
+                <article class="home-content" data-reveal="up">
+                    <p class="eyebrow">Freelance Full-Stack Developer</p>
+                    <h1>Building <span>client-winning digital</span><br>products with premium UX.</h1>
+                    <h2 class="typing-text">I build <span id="dynamic-role">Modern Interfaces</span></h2>
+                    <p>
+                        I am Chetan Thakur. I design and develop websites that help businesses generate leads,
+                        showcase products, and grow online with confidence.
+                    </p>
+                    <div class="cta-row">
+                        <a href="#contact" class="btn magnetic route-link">Hire Me</a>
+                        <a href="Resume Format by crc with photo.pdf" class="btn btn-ghost magnetic" download target="_blank" rel="noopener noreferrer">Download Resume <i class="fa-solid fa-download"></i></a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/chetan-thakur-b48aa52a8/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/chetanthakur0507" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/Chetanthakur050" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://leetcode.com/u/chetanthakur0507/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode"></a>
+                    </div>
+                </article>
 
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/chetan-thakur-b48aa52a8/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/chetanthakur0507"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Chetanthakur050"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://leetcode.com/u/chetanthakur0507/"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="12"></a>
+                <aside class="hero-card">
+                    <div class="home-img">
+                        <img src="chetans.jpeg" alt="Portrait of Chetan Thakur">
+                    </div>
+                    <div class="stat-grid">
+                        <div><h3>30+</h3><p>Web Projects</p></div>
+                        <div><h3>12+</h3><p>Real Clients</p></div>
+                        <div><h3>100%</h3><p>Responsive UX</p></div>
+                        <div><h3>Fast</h3><p>Delivery Focus</p></div>
+                    </div>
+                </aside>
+            </div>
+        </section>
 
+        <section class="services snap-section" id="services" data-section>
+            <div class="parallax-layer line-grid" data-depth="0.25"></div>
+            <div class="section-header" data-reveal="up">
+                <p class="eyebrow">What I Do</p>
+                <h2 class="heading">Services</h2>
+            </div>
+            <div class="services-container">
+                <article class="service-box" data-reveal="up">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Frontend Development</h3>
+                    <p>High-converting landing pages, product pages, and portfolio websites with premium UI.</p>
+                </article>
+                <article class="service-box" data-reveal="up" data-delay="0.1">
+                    <i class="fa-solid fa-server"></i>
+                    <h3>Backend Integration</h3>
+                    <p>Secure forms, APIs, dashboard workflows, and scalable backend endpoints.</p>
+                </article>
+                <article class="service-box" data-reveal="up" data-delay="0.2">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h3>Motion + Branding</h3>
+                    <p>GSAP and WebGL powered motion systems that improve trust and engagement.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="freelance snap-section" id="freelance" data-section>
+            <div class="section-header" data-reveal="up">
+                <p class="eyebrow">Freelance Workflow</p>
+                <h2 class="heading">How I Work With Clients</h2>
+            </div>
+            <div class="freelance-grid">
+                <article class="freelance-step" data-reveal="up">
+                    <span>01</span>
+                    <h3>Discovery Call</h3>
+                    <p>Business goals, audience, and project scope align karte hain before design starts.</p>
+                </article>
+                <article class="freelance-step" data-reveal="up" data-delay="0.08">
+                    <span>02</span>
+                    <h3>UI + Architecture</h3>
+                    <p>Wireframe, design direction, and technical stack lock karte hain for smooth execution.</p>
+                </article>
+                <article class="freelance-step" data-reveal="up" data-delay="0.16">
+                    <span>03</span>
+                    <h3>Build + Review</h3>
+                    <p>Weekly updates, rapid iterations, and deployment-ready QA with performance checks.</p>
+                </article>
+                <article class="freelance-step" data-reveal="up" data-delay="0.24">
+                    <span>04</span>
+                    <h3>Launch + Support</h3>
+                    <p>Production launch, analytics setup, and post-launch support for confidence and growth.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="skills snap-section" id="skills" data-section>
+            <div class="section-header" data-reveal="up">
+                <p class="eyebrow">Toolkit</p>
+                <h2 class="heading">Skills</h2>
             </div>
 
-            <a href="#contact" class="btn">Hire Me</a>
-            <a href="2026 Resume Format by crc.pdf" class="btn" download target="_blank" rel="noopener noreferrer">Resume<i class="fa-solid fa-download"></i></a>
-        </div>
+            <div class="skills-layout">
+                <div class="skills-cloud" data-reveal="left">
+                    <div class="chip">Python</div>
+                    <div class="chip">HTML</div>
+                    <div class="chip">CSS</div>
+                    <div class="chip">JavaScript</div>
+                    <div class="chip">Java</div>
+                    <div class="chip">Node.js</div>
+                    <div class="chip">Express.js</div>
+                    <div class="chip">MongoDB</div>
+                     <div class="chip">React.js</div>
+                      <div class="chip">Next.js</div>
+                    <div class="chip">MySQL</div>
+                    <div class="chip">Tailwind</div>
+                    <div class="chip">Bootstrap</div>
+                    <div class="chip">Postman</div>
+                    <div class="chip">Three.js</div>
+                    <div class="chip">GSAP</div>
+                </div>
 
-    </section>
-
-    <section class="services" id="services">
-        <h2 class="heading">Services</h2>
-
-        <div class="services-container">
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Frontend Web Developer</h4>
-                    <p>Passionate and detail-oriented Frontend Web Developer with expertise in building responsive, user-friendly, and visually appealing web applications.</p>
+                <div class="skill-bars" data-reveal="right">
+                    <div class="progress-item"><div class="progress-label"><span>Frontend Engineering</span><span>92%</span></div><div class="progress-track"><span style="--value: 92%"></span></div></div>
+                    <div class="progress-item"><div class="progress-label"><span>Backend APIs</span><span>84%</span></div><div class="progress-track"><span style="--value: 84%"></span></div></div>
+                    <div class="progress-item"><div class="progress-label"><span>UI/UX Systems</span><span>89%</span></div><div class="progress-track"><span style="--value: 89%"></span></div></div>
+                    <div class="progress-item"><div class="progress-label"><span>Client Communication</span><span>93%</span></div><div class="progress-track"><span style="--value: 93%"></span></div></div>
                 </div>
             </div>
-            
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Backend Web Developer</h4>
-                    <p>Proficient in Node.js, Express.js. Skilled in handling RESTful APIs, managing databases, and authentication features..</p>
-                </div>
+        </section>
+
+        <section class="projects snap-section" id="projects" data-section>
+            <div class="section-header" data-reveal="up">
+                <p class="eyebrow">Portfolio</p>
+                <h2 class="heading">Projects</h2>
             </div>
 
-              <div class="service-box">
-                <div class="service-info">
-                    <h4>UI/UX Design</h4>
-                    <p>Creative and detail-oriented UI/UX Designer with a strong understanding of web design .</p>
-                </div>
+            <div class="projects-box">
+                <article class="project-card tilt-card" data-reveal="up">
+                    <span class="project-spotlight"></span>
+                    <div class="project-media"><img src="personal-store.png" alt="Personal store locator project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-coding-on-laptop-1579/1080p.mp4"></video></div>
+                    <h3>Personal Store Locator</h3>
+                    <p>Inventory platform to locate products in seconds for store teams.</p>
+                    <a class="btn small magnetic transition-link" href="https://personal-store-locator.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+                </article>
+
+                <article class="project-card tilt-card" data-reveal="up">
+                    <span class="project-spotlight"></span>
+                    <div class="project-media"><img src="doctor appointment.png" alt="Doctor appointment project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-developer-at-work-1574/1080p.mp4"></video></div>
+                    <h3>Doctor Appointment Platform</h3>
+                    <p>Booking workflow with admin, doctor, and patient panel management.</p>
+                    <a class="btn small magnetic transition-link" href="https://doctor-appointment-website-three.vercel.app" target="_blank" rel="noopener noreferrer">View Project</a>
+                </article>
+
+                <article class="project-card tilt-card" data-reveal="up"><span class="project-spotlight"></span><div class="project-media"><img src="AthleteAi.png" alt="Athlete AI project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-looking-at-code-1578/1080p.mp4"></video></div><h3>Athlete AI</h3><p>Fitness-tech platform for training, nutrition, and athlete guidance.</p><a class="btn small magnetic transition-link" href="https://athletiq-ruddy.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+
+                <article class="project-card tilt-card" data-reveal="up"><span class="project-spotlight"></span><div class="project-media"><img src="spellmyjob.png" alt="Spell My Job project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-man-coding-1575/1080p.mp4"></video></div><h3>Spell My Job</h3><p>Landing page designed for conversion-focused user journeys.</p><a class="btn small magnetic transition-link" href="https://spell-my-job-delta.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+
+                <article class="project-card tilt-card" data-reveal="up"><span class="project-spotlight"></span><div class="project-media"><img src="shree-ram.png" alt="Shree Ram Readymade project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-scrolling-through-code-1577/1080p.mp4"></video></div><h3>Shree Ram Readymade Shop</h3><p>Real client clothing store site with strong brand presence and fast UX.</p><a class="btn small magnetic transition-link" href="https://www.shreeramreadymade.me/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+
+                <article class="project-card tilt-card" data-reveal="up"><span class="project-spotlight"></span><div class="project-media"><img src="quiz.png" alt="Quiz Generator project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-coding-with-two-monitors-1576/1080p.mp4"></video></div><h3>Quiz Generator</h3><p>Interactive quiz platform with clean UX and responsive performance.</p><a class="btn small magnetic transition-link" href="https://quiz-app-pearl-psi.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+
+                <article class="project-card tilt-card" data-reveal="up"><span class="project-spotlight"></span><div class="project-media"><img src="ai project.jpeg" alt="AI Chatbot project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-futuristic-programming-6676/1080p.mp4"></video></div><h3>AI Chatbot</h3><p>Adaptive chatbot that learns from interactions for better responses.</p><a class="btn small magnetic transition-link" href="https://ai-chatbot-ir3u.onrender.com/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+
+                <article class="project-card tilt-card" data-reveal="up"><span class="project-spotlight"></span><div class="project-media"><img src="tik tak toe.png" alt="Tic Tac Toe project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-coding-neon-6391/1080p.mp4"></video></div><h3>Tic-Tac-Toe</h3><p>Interactive game app with logic, UI state handling, and score flow.</p><a class="btn small magnetic transition-link" href="https://chetanthakur0507.github.io/tiktak/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+
+                <article class="project-card tilt-card" data-reveal="up"><span class="project-spotlight"></span><div class="project-media"><img src="Animated-Website.png" alt="Animated website project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-creative-programmer-1573/1080p.mp4"></video></div><h3>Animated Website</h3><p>Motion-first interface showcasing transitions and interaction polish.</p><a class="btn small magnetic transition-link" href="https://ashmitsingh13.github.io/Animated-Website/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+
+                <article class="project-card tilt-card" data-reveal="up"><span class="project-spotlight"></span><div class="project-media"><img src="Rock paper.png" alt="Rock paper scissors project"><video class="project-preview" muted loop playsinline preload="none" src="https://cdn.coverr.co/videos/coverr-coding-on-dark-theme-1572/1080p.mp4"></video></div><h3>Rock Paper Scissors</h3><p>Classic game with lightweight architecture and responsive UI logic.</p><a class="btn small magnetic transition-link" href="https://chetanthakur0507.github.io/project-of-rock-paper-and-scissors/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+            </div>
+        </section>
+
+        <section class="clients snap-section" id="clients" data-section>
+            <div class="section-header" data-reveal="up">
+                <p class="eyebrow">Real Client Delivery</p>
+                <h2 class="heading">Client Work</h2>
+            </div>
+            <div class="clients-grid">
+                <article class="client-card" data-reveal="up">
+                    <h3>Shree Ram Readymade</h3>
+                    <p>E-commerce style showcase website for local clothing business with modern visual branding.</p>
+                    <ul>
+                        <li>Responsive mobile-first layout</li>
+                        <li>Product highlight sections</li>
+                        <li>Lead-ready contact flow</li>
+                    </ul>
+                </article>
+                <article class="client-card" data-reveal="up" data-delay="0.08">
+                    <h3>Healthcare Booking Product</h3>
+                    <p>Doctor appointment stack with role-based workflow and dashboard features.</p>
+                    <ul>
+                        <li>Doctor panel + user booking</li>
+                        <li>Admin management modules</li>
+                        <li>Improved appointment clarity</li>
+                    </ul>
+                </article>
+                <article class="client-card" data-reveal="up" data-delay="0.16">
+                    <h3>Small Business Landing Funnels</h3>
+                    <p>Multiple niche websites for conversion, trust building, and brand storytelling.</p>
+                    <ul>
+                        <li>SEO-friendly page structure</li>
+                        <li>Fast loading sections</li>
+                        <li>CTA focused information flow</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="testimonials snap-section" id="testimonials" data-section>
+            <div class="section-header" data-reveal="up">
+                <p class="eyebrow">Social Proof</p>
+                <h2 class="heading">Client Feedback</h2>
+            </div>
+            <div class="testimonial-grid">
+                <article class="testimonial-card" data-reveal="up">
+                    <p>"Project delivery fast tha, design clean tha, and website se hume direct customer inquiries milne lagi."</p>
+                    <h4>- Retail Business Owner</h4>
+                </article>
+                <article class="testimonial-card" data-reveal="up" data-delay="0.1">
+                    <p>"Communication clear rahi and revisions bahut quickly mil gaye. Overall professional experience."</p>
+                    <h4>- Freelance Client</h4>
+                </article>
+                <article class="testimonial-card" data-reveal="up" data-delay="0.2">
+                    <p>"Animation and UI quality expected se better thi. Product ka impression kaafi premium ho gaya."</p>
+                    <h4>- Startup Founder</h4>
+                </article>
+            </div>
+        </section>
+
+        <section class="education snap-section" id="education" data-section>
+            <div class="section-header" data-reveal="up">
+                <p class="eyebrow">Journey</p>
+                <h2 class="heading">Education</h2>
+            </div>
+            <div class="timeline">
+                <article class="timeline-card" data-reveal="left"><span>2023 - Present</span><h3>B.Tech in Computer Science</h3><p>Invertis University, focused on DSA, software engineering, and full-stack systems.</p></article>
+                <article class="timeline-card" data-reveal="right"><span>2022 - 2023</span><h3>Senior Secondary (PCM)</h3><p>Uttar Pradesh Board with strong grounding in mathematics and science.</p></article>
+                <article class="timeline-card" data-reveal="left"><span>2020 - 2021</span><h3>High School</h3><p>Core foundation in mathematics, science, Hindi, and English communication.</p></article>
+            </div>
+        </section>
+
+        <section class="contact snap-section" id="contact" data-section>
+            <div class="section-header" data-reveal="up">
+                <p class="eyebrow">Lets Build Together</p>
+                <h2 class="heading">Contact Me</h2>
             </div>
 
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2 class="heading">Skills</h2>
-        <div class="container">
-            <div class="row" id="skillsContainer">
-                <div class="bar">
-                    <div class="info">
-                        <img src="Python.png" width="45px">
-                        <span>Python</span>
-                    </div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <img src="Html.png" width="45px">
-                        <span>Html</span>
-                    </div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <img src="CSS.png" width="45px">
-                        <span>CSS</span>
-                    </div>
-                </div>
-                <div class="bar animate_animated animate_zoomIn animate_delay-2s">
-                    <div class="info">
-                        <img src="JavaScript.png" width="45px">
-                        <span>Java Script</span>
-                    </div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <img src="Java.png" width="45px">
-                        <span>Java</span>
-                    </div>
-                </div>
-                
-                <div class="bar">
-                    <div class="info">
-                        <img src="express.png" width="78px">
-                        <span>Express</span>
-                    </div>
-                </div>
-
-                <div class="bar">
-                    <div class="info">
-                        <img src="postman.png" width="45px">
-                        <span>Postman</span>
-                    </div>
-                </div>
-
-                <div class="bar">
-                    <div class="info">
-                        <img src="tailwind.png" width="78px">
-                        <span>Tailwind</span>
-                    </div>
-                </div>
-
-                
-
-
-                <div class="bar">
-                    <div class="info">
-                        <img src="bootstrap-social-logo.png" width="45px">
-                        <span>Bootstrap</span>
-                    </div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <img src="nodejs.svg" width="45px">
-                        <span>Nodejs</span>
-                    </div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <img src="mysql.png" width="45px">
-                        <span>MySql</span>
-                    </div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <img src="MongoDB.png" width="45px">
-                        <span>MongoDB</span>
-                    </div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <img src="Mongoose.png" width="45px">
-                        <span>Mongoose</span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <h2 class="heading">My <span> Projects</span></h2>
-        <div class="projects-box">
-
-            
-           <div class="project-card">
-                <img src="doctor appointment.png" alt="">
-                <h3>Doctor Appointment website</h3>
-                <p>"Our project is for the hospital that contain admin, doctor & user panel. User can view the doctors and book the appointment and doctor can see the profile of user & admin have all data of user and doctor."</p>
-                <div class="btn"><a href="https://doctor-appointment-website-three.vercel.app">Review Project</a></div>
-            </div>
-
-            <div class="project-card">
-                <img src="AthleteAi.png" alt="">
-                <h3>Athlete-Ai Website</h3>
-                <p>"Our project brings the power of a personal trainer, a nutritionist, and a mentor — all inside a single platform, accessible to every athlete in India, from cities to the remotest villages.</p>
-                <div class="btn"><a href="https://athletiq-ruddy.vercel.app/">Review Project</a></div>
-            </div>
-
-            <div class="project-card">
-                <img src="spellmyjob.png" alt="">
-                <h3>Spell My Job</h3>
-                <p>A "Landing-Page" is a focused web page designed to capture user attention and drive a specific action, such as signing up, purchasing a product, or learning more about a service. </p>
-                <div class="btn"><a href="https://spell-my-job-delta.vercel.app/">Review Project</a></div>
-            </div>
-
-            <div class="project-card">
-                <img src="ai project.jpeg" alt="">
-                <h3>AI Chatboat</h3>
-                <p>This chatbot doesn't just reply — it grows smarter every time you ask something new.If it doesn’t know an answer, it asks you — and then remembers it for next time. Just like a real conversation! 🔁</p>
-                <div class="btn"><a href="https://ai-chatbot-ir3u.onrender.com/">Review Project</a></div>
-            </div>
-
-            <div class="project-card">
-                <img src="tik tak toe.png" alt="">
-                <h3>Tic-Tac-Toe</h3>
-                <p>A simple and interactive Tic Tac Toe game built using HTML, CSS, and JavaScript. The game allows two players to take turns marking X and O on a 3x3 grid. It features win detection logic, draw condition, and real-time updates to the game board 🔁</p>
-                <div class="btn"><a href="https://chetanthakur0507.github.io/tiktak/">Review Project</a></div>
-            </div>
-
-            
-            <div class="project-card">
-                <img src="Animated-Website.png" alt="">
-                <h3>Animated-Website</h3>
-                <p>An Animated-Website project is a creative endeavor that combines web development and animation techniques to build engaging, dynamic online experiences.</p>
-                <div class="btn"><a href="https://ashmitsingh13.github.io/Animated-Website/">Review Project</a></div>
-            </div>
-
-            <div class="project-card">
-                <img src="Rock paper.png" alt="">
-                <h3>Rock,paper,Scissor</h3>
-                <p>A simple and interactive Tic Tac Toe game built using HTML, CSS, and JavaScript. The game allows two players to take turns marking X and O on a 3x3 grid. It features win detection logic, draw condition, and real-time updates to the game board 🔁</p>
-                <div class="btn"><a href="https://chetanthakur0507.github.io/project-of-rock-paper-and-scissors/">Review Project</a></div>
-                
-            </div>
-
-            
-        </div>
-
-    </section>
-
-    <section class="education" id="education">
-        <h2 class="heading">My <span>Education</span></h2>
-        <div class="timeline">
-            <div class="container right">
-                <div class="content">
-                    <div class="tag">
-                        <h2>University</h2>
-                    </div>
-                    <div class="decs"><p>Bachelor of Technology in Computer Science Invertis University, 2023 - Present<br><br>Relevant coursework: Data Structures and Algorithms, Software Engineering, Web Development, Circuit Analysis</p></div>
-
-                </div>
-            </div>
-
-            <div class="container left">
-                <div class="content">
-                    <div class="tag">
-                        <h2>Secondary School</h2>
-                    </div>
-                    <div class="decs"><p>UttarPradesh Board <br>12th , Physics Chemistry Maths<br>Apr 2022 - Mar 2023</p></div>
-
-                </div>
-            </div>
-            </div>
-
-            <div class="container right">
-                <div class="content">
-                    <div class="tag">
-                        <h2>High School</h2>
-                    </div>
-                    <div class="decs"><p>UttarPradesh Board <br>10th , Maths,English,Hindi,Science<br>Apr 2020 - Mar 2021</p></div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <div class="input-box">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form" data-reveal="up">
                 <input type="hidden" name="access_key" value="c523e17a-2e69-4b9d-8b43-96e4580f9eec">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="number" name="phonenumber" placeholder="Phone Number" required>
-                <input type="text" name="subject" placeholder="Subject" >
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            </div>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
-
-
-    
-
-
-
+                <div class="input-grid">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="number" name="phonenumber" placeholder="Phone Number" required>
+                    <input type="text" name="subject" placeholder="Project Subject">
+                </div>
+                <textarea name="message" rows="8" placeholder="Tell me about your project..." required></textarea>
+                <button type="submit" class="btn magnetic" id="form-submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="social">
-                <a href="https://www.linkedin.com/in/chetan-thakur-b48aa52a8/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/chetanthakur0507"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Chetanthakur050"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://leetcode.com/u/chetanthakur0507/"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="12"></a>
-
+        <div class="footer-top">
+            <a href="#home" class="logo route-link">Chetan<span>.</span></a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/chetan-thakur-b48aa52a8/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/chetanthakur0507" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Chetanthakur050" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
         </div>
-        <ul class="list">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#services">Service</a></li>
-            <li><a href="#education">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#">Privacy Policies</a></li>
-        </ul>
-        <p class="copyright">
-            ©Chetan thakur | All Right Reserved
-        </p>
+        <p>Freelance-ready portfolio crafted for real client acquisition.</p>
+        <p class="copyright">&copy; <span id="year"></span> Chetan Thakur. All rights reserved.</p>
     </footer>
+
+    <div class="success-modal" id="success-modal" aria-hidden="true" role="dialog" aria-labelledby="success-title">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close" aria-label="Close message"><i class="fa-solid fa-xmark"></i></button>
+            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+            <h3 id="success-title">Message Sent Successfully</h3>
+            <p>Thank you. Your message has been delivered and I will get back to you soon.</p>
+            <button class="btn" id="modal-ok">Awesome</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.164.1/three.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
     <script src="script.js"></script>
 </body>
 
