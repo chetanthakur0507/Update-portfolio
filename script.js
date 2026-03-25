@@ -3,7 +3,6 @@ const navbar = document.getElementById("navbar");
 const navLinks = document.querySelectorAll(".navbar a");
 const routeLinks = document.querySelectorAll(".route-link");
 const sections = document.querySelectorAll("main section[id]");
-const snapSections = document.querySelectorAll(".snap-section");
 const yearNode = document.getElementById("year");
 const cursorGlow = document.querySelector(".cursor-glow");
 const roleNode = document.getElementById("dynamic-role");
@@ -54,8 +53,8 @@ function initLenis() {
     }
 
     lenis = new Lenis({
-        duration: 1.2,
-        smoothWheel: true,
+        duration: 0.8,
+        smoothWheel: false,
         wheelMultiplier: 0.92,
         touchMultiplier: 1.15
     });
@@ -422,22 +421,6 @@ if (window.gsap && !prefersReducedMotion) {
         });
     });
 
-    if (snapSections.length > 2) {
-        ScrollTrigger.create({
-            trigger: "main",
-            start: "top top",
-            end: "bottom bottom",
-            snap: {
-                snapTo: (value) => {
-                    const snapPoints = [...snapSections].map((section) => section.offsetTop / (document.body.scrollHeight - window.innerHeight));
-                    return snapPoints.reduce((closest, point) => Math.abs(point - value) < Math.abs(closest - value) ? point : closest, snapPoints[0]);
-                },
-                duration: { min: 0.2, max: 0.55 },
-                delay: 0.06,
-                ease: "power1.inOut"
-            }
-        });
-    }
 }
 
 function initThreeBackground() {
