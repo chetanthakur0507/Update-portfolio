@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: 
+
+Sitemap: https://chetanthakur.dev/sitemap.xml
+
+# Faster crawl rate for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.1
+
+# Faster crawl rate for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
